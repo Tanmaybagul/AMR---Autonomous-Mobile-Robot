@@ -1,0 +1,187 @@
+<?xml version="1.0" ?>
+<robot name="amr_x100" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find amr_x100_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find amr_x100_description)/urdf/amr_x100.trans" />
+<xacro:include filename="$(find amr_x100_description)/urdf/amr_x100.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="7.255471404615764e-17 0.006962748981841171 0.10189542905865645" rpy="0 0 0"/>
+    <mass value="7.872164892691029"/>
+    <inertia ixx="0.074639" iyy="0.044119" izz="0.069393" ixy="-0.0" iyz="-0.002422" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="gray"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_wheel_1">
+  <inertial>
+    <origin xyz="0.005146604543041153 -5.864185124465626e-06 1.200411432194376e-05" rpy="0 0 0"/>
+    <mass value="0.20600519133637565"/>
+    <inertia ixx="0.000248" iyy="0.000149" izz="0.000149" ixy="0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07 0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07 0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_left_wheel_1">
+  <inertial>
+    <origin xyz="0.005146604543041153 -1.2134853114117994e-05 -5.588628440588578e-06" rpy="0 0 0"/>
+    <mass value="0.20600519133637565"/>
+    <inertia ixx="0.000248" iyy="0.000149" izz="0.000149" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.07 -0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/back_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.07 -0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/back_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="back_right_wheel_1">
+  <inertial>
+    <origin xyz="-0.005146604543041236 5.249658346917485e-08 1.335981556964752e-05" rpy="0 0 0"/>
+    <mass value="0.20600519133637565"/>
+    <inertia ixx="0.000248" iyy="0.000149" izz="0.000149" ixy="0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.07 -0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.07 -0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/back_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_wheel_1">
+  <inertial>
+    <origin xyz="-0.005146604543041167 -8.613623555836503e-06 1.0212390375619745e-05" rpy="0 0 0"/>
+    <mass value="0.20600519133637565"/>
+    <inertia ixx="0.000248" iyy="0.000149" izz="0.000149" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.07 0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="0.07 0.095 -0.0275" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Lidar_1">
+  <inertial>
+    <origin xyz="-3.618764437576268e-18 -6.938893903907228e-18 0.010000000000000009" rpy="0 0 0"/>
+    <mass value="0.3082687791334984"/>
+    <inertia ixx="5.8e-05" iyy="5.8e-05" izz="9.6e-05" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.0 -0.02 -0.18" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="black"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.0 -0.02 -0.18" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="file://$(find amr_x100_description)/meshes/Lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="front_left_wheel" type="continuous">
+  <origin xyz="0.07 -0.095 0.0275" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="back_left_wheel" type="continuous">
+  <origin xyz="0.07 0.095 0.0275" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_left_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="back_right_wheel" type="continuous">
+  <origin xyz="-0.07 0.095 0.0275" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="back_right_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="front_right_wheel" type="continuous">
+  <origin xyz="-0.07 -0.095 0.0275" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_wheel_1"/>
+  <axis xyz="1.0 0.0 0.0"/>
+</joint>
+
+<joint name="Rigid 5" type="fixed">
+  <origin xyz="0.0 0.02 0.18" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="Lidar_1"/>
+</joint>
+
+<!-- Added later for trial-->
+
+<gazebo>
+  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <ros>
+      <namespace>/</namespace>
+      <remapping>cmd_vel:=/cmd_vel</remapping>
+    </ros>
+    <left_joint>front_left_wheel</left_joint>
+    <left_joint>back_left_wheel</left_joint>
+    <right_joint>front_right_wheel</right_joint>
+    <right_joint>back_right_wheel</right_joint>
+    <wheel_separation>0.14</wheel_separation>
+    <wheel_diameter>0.09135</wheel_diameter>
+    <torque>100000000000000.0</torque>
+    <command_topic>/cmd_vel</command_topic>
+  </plugin>
+</gazebo>
+
+
+</robot>
